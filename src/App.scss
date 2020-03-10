@@ -1,0 +1,326 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@import "./styles/_variables.scss";
+@import "./styles/_buttons.scss";
+
+body * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $gray;
+}
+
+.main-content {
+  min-width: 375px;
+  margin: auto;
+}
+
+header {
+  position: relative;
+  padding: $base-padding;
+  background-color: $black;
+
+  .link {
+    display: inline-block;
+
+    &__logo {
+      display: inline-block;
+      width: 120px;
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    &__profile {
+      position: absolute;
+      right: $base-padding;
+      bottom: $base-padding;
+      color: $white;
+      text-decoration: none;
+      text-transform: capitalize;
+    }
+  }
+}
+
+main {
+  padding: $base-padding;
+}
+
+.jobs {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.job {
+  width: 100%;
+  margin-bottom: $base-padding;
+  background-color: $white;
+
+  &__img {
+    width: 100%;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__content {
+    padding: $base-padding - 5px 0;
+  }
+
+  &__title,
+  &__company,
+  &__highlight,
+  &__details,
+  .decision-btns {
+    padding-left: $base-padding + 5px;
+    padding-right: $base-padding + 5px;
+  }
+
+  &__title,
+  &__company {
+    margin-bottom: $base-margin;
+    font-weight: bold;
+  }
+
+  &__title {
+    font-size: $font-base;
+  }
+
+  &__company {
+    font-size: $font-small;
+  }
+
+  &__highlight {
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: $shamrock;
+
+    &--left,
+    &--right {
+      width: 50%;
+    }
+
+    &--right {
+      text-align: right;
+
+      .value {
+        position: relative;
+
+        &:before {
+          content: "$";
+          display: block;
+          position: absolute;
+          left: -10px;
+          top: -7px;
+          font-size: $font-small;
+        }
+      }
+    }
+
+    .label,
+    .value {
+      font-weight: bold;
+    }
+
+    .label {
+      display: block;
+      font-size: 9px;
+      text-transform: capitalize;
+      margin-bottom: $base-margin;
+    }
+
+    .value {
+      display: inline-block;
+      color: $white;
+      font-size: 26px;
+      line-height: 26px;
+    }
+  }
+
+  &__details {
+    margin-bottom: 10px;
+  }
+
+  &__detail {
+    position: relative;
+    padding: 10px 20px 10px 30px;
+    border-bottom: 1px solid $gray;
+    font-size: $font-small;
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 20px;
+      left: 0;
+      width: 18px;
+      height: 18px;
+    }
+
+    &:last-of-type {
+      border: none;
+    }
+
+    h4 {
+      margin-bottom: $base-margin;
+      font-size: 12px;
+      text-transform: capitalize;
+    }
+
+    ul {
+      list-style: none;
+      max-height: 40px;
+      overflow: hidden;
+
+      li {
+        margin-bottom: $base-margin;
+      }
+    }
+
+    &.shift-dates {
+      &:before {
+        background: url(./assets/icon-calendar.png) no-repeat center center;
+        background-size: contain;
+      }
+    }
+
+    &.location {
+      &:before {
+        background: url(./assets/icon-location.png) no-repeat center center;
+        background-size: contain;
+      }
+
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        background: url(./assets/icon-chevron-right.png) no-repeat center center;
+        background-size: contain;
+      }
+
+      span {
+        font-size: 10px;
+        color: $emperor;
+      }
+    }
+
+    &.requirements {
+      &:before {
+        background: url(./assets/icon-requirements.png) no-repeat center center;
+        background-size: contain;
+      }
+
+      ul {
+        li {
+          position: relative;
+          padding-left: 10px;
+          text-transform: capitalize;
+
+          &:before {
+            content: "-";
+            display: block;
+            position: absolute;
+            left: 0;
+          }
+        }
+      }
+    }
+
+    &.report-to {
+      &:before {
+        background: url(./assets/icon-contact.png) no-repeat center center;
+        background-size: contain;
+      }
+    }
+  }
+
+  .decision-btns {
+    display: flex;
+
+    .btn {
+      width: 49%;
+
+      &:nth-child(odd) {
+        margin-right: 2%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .jobs {
+    &:after {
+      content: "";
+      flex: auto;
+    }
+  }
+
+  .job {
+    max-width: 48%;
+
+    &:nth-child(odd) {
+      margin-right: 2%;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .job {
+    max-width: 32%;
+    margin-right: 2%;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+}

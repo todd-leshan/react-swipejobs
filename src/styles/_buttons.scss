@@ -1,0 +1,30 @@
+.btn {
+  padding: $base-padding - 3px $base-padding;
+  border: 1px solid $dusty-gray;
+  border-radius: 3px;
+  font-size: $font-base;
+  cursor: pointer;
+  transition: all 0.25s;
+
+  &--white {
+    background-color: $white;
+    color: $dusty-gray;
+
+    &:hover,
+    &:active {
+      background-color: $dusty-gray;
+      color: $white;
+    }
+  }
+
+  &--black {
+    background-color: $black;
+    color: $white;
+
+    &:hover,
+    &:active {
+      background-color: $white;
+      color: $black;
+    }
+  }
+}
