@@ -96,9 +96,11 @@ main {
 
 .job {
   width: 100%;
+  padding-bottom: $base-padding + 45px;
   margin-bottom: $base-padding;
   background-color: $white;
   align-content: stretch;
+  position: relative;
 
   &__img {
     width: 100%;
@@ -182,10 +184,6 @@ main {
       font-size: 26px;
       line-height: 26px;
     }
-  }
-
-  &__details {
-    margin-bottom: 10px;
   }
 
   &__detail {
@@ -288,6 +286,9 @@ main {
   }
 
   .decision-btns {
+    width: 100%;
+    position: absolute;
+    bottom: $base-padding;
     display: flex;
 
     .btn {

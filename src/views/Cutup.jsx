@@ -67,14 +67,14 @@ const Cutup = () => {
                   <p>Dave (123) 546 987</p>
                 </div>
               </div>
-              <div className="decision-btns">
-                <button className="btn btn--white" type="button">
-                  No Thanks
-                </button>
-                <button className="btn btn--black" type="button">
-                  I'll Take it
-                </button>
-              </div>
+            </div>
+            <div className="decision-btns">
+              <button className="btn btn--white" type="button">
+                No Thanks
+              </button>
+              <button className="btn btn--black" type="button">
+                I'll Take it
+              </button>
             </div>
           </div>
 
@@ -123,20 +123,15 @@ const Cutup = () => {
                     <li>sth else</li>
                   </ul>
                 </div>
-
-                <div className="job__detail report-to">
-                  <h4>report to</h4>
-                  <p>Dave (123) 546 987</p>
-                </div>
               </div>
-              <div className="decision-btns">
-                <button className="btn btn--white" type="button">
-                  No Thanks
-                </button>
-                <button className="btn btn--black" type="button">
-                  I'll Take it
-                </button>
-              </div>
+            </div>
+            <div className="decision-btns">
+              <button className="btn btn--white" type="button">
+                No Thanks
+              </button>
+              <button className="btn btn--black" type="button">
+                I'll Take it
+              </button>
             </div>
           </div>
 
@@ -168,66 +163,6 @@ const Cutup = () => {
                     <li>APR 7, WED 8:00 AM - 10:00PM PDT</li>
                     <li>APR 8, WED 8:00 AM - 10:00PM PDT</li>
                     <li>APR 9, WED 8:00 AM - 10:00PM PDT</li>
-                  </ul>
-                </div>
-
-                <div className="job__detail location">
-                  <h4>Location</h4>
-                  <p>123 Main Street, Tacoma, WA 98409</p>
-                  <span>5.62 miles from your job search location</span>
-                </div>
-
-                <div className="job__detail requirements">
-                  <h4>Requirements</h4>
-                  <ul>
-                    <li>safety vest</li>
-                    <li>hard hat</li>
-                    <li>sth else</li>
-                  </ul>
-                </div>
-
-                <div className="job__detail report-to">
-                  <h4>report to</h4>
-                  <p>Dave (123) 546 987</p>
-                </div>
-              </div>
-              <div className="decision-btns">
-                <button className="btn btn--white" type="button">
-                  No Thanks
-                </button>
-                <button className="btn btn--black" type="button">
-                  I'll Take it
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div className="job">
-            <div className="job__img">
-              <img
-                src="https://imgs.swipejobs.com/js/job-category/construction-1.jpg"
-                alt=""
-              />
-            </div>
-            <div className="job__content">
-              <h2 className="job__title">Construction General Helper</h2>
-              <div className="job__company">C.D Barnes & Associates</div>
-              <div className="job__highlight">
-                <div className="job__highlight--left">
-                  <span className="label">Distance</span>
-                  <span className="value">5.6 miles</span>
-                </div>
-                <div className="job__highlight--right">
-                  <span className="label">Hourly Rate</span>
-                  <span className="value">13.50</span>
-                </div>
-              </div>
-
-              <div className="job__details">
-                <div className="job__detail shift-dates">
-                  <h4>shift dates</h4>
-                  <ul>
-                    <li>APR 7, WED 8:00 AM - 10:00PM PDT</li>
                     <li>APR 8, WED 8:00 AM - 10:00PM PDT</li>
                     <li>APR 9, WED 8:00 AM - 10:00PM PDT</li>
                   </ul>
@@ -253,265 +188,15 @@ const Cutup = () => {
                   <p>Dave (123) 546 987</p>
                 </div>
               </div>
-              <div className="decision-btns">
-                <button className="btn btn--white" type="button">
-                  No Thanks
-                </button>
-                <button className="btn btn--black" type="button">
-                  I'll Take it
-                </button>
-              </div>
             </div>
-          </div>
-
-          <div className="job">
-            <div className="job__img">
-              <img
-                src="https://imgs.swipejobs.com/js/job-category/construction-1.jpg"
-                alt=""
-              />
+            <div className="decision-btns">
+              <button className="btn btn--white" type="button">
+                No Thanks
+              </button>
+              <button className="btn btn--black" type="button">
+                I'll Take it
+              </button>
             </div>
-            <div className="job__content">
-              <h2 className="job__title">Construction General Helper</h2>
-              <div className="job__company">C.D Barnes & Associates</div>
-              <div className="job__highlight">
-                <div className="job__highlight--left">
-                  <span className="label">Distance</span>
-                  <span className="value">5.6 miles</span>
-                </div>
-                <div className="job__highlight--right">
-                  <span className="label">Hourly Rate</span>
-                  <span className="value">13.50</span>
-                </div>
-              </div>
-
-              <div className="job__details">
-                <div className="job__detail shift-dates">
-                  <h4>shift dates</h4>
-                  <ul>
-                    <li>APR 7, WED 8:00 AM - 10:00PM PDT</li>
-                    <li>APR 8, WED 8:00 AM - 10:00PM PDT</li>
-                    <li>APR 9, WED 8:00 AM - 10:00PM PDT</li>
-                  </ul>
-                </div>
-
-                <div className="job__detail location">
-                  <h4>Location</h4>
-                  <p>123 Main Street, Tacoma, WA 98409</p>
-                  <span>5.62 miles from your job search location</span>
-                </div>
-
-                <div className="job__detail requirements">
-                  <h4>Requirements</h4>
-                  <ul>
-                    <li>safety vest</li>
-                    <li>hard hat</li>
-                    <li>sth else</li>
-                  </ul>
-                </div>
-
-                <div className="job__detail report-to">
-                  <h4>report to</h4>
-                  <p>Dave (123) 546 987</p>
-                </div>
-              </div>
-              <div className="decision-btns">
-                <button className="btn btn--white" type="button">
-                  No Thanks
-                </button>
-                <button className="btn btn--black" type="button">
-                  I'll Take it
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div className="job">
-            <div className="job__img">
-              <img
-                src="https://imgs.swipejobs.com/js/job-category/construction-1.jpg"
-                alt=""
-              />
-            </div>
-            <div className="job__content">
-              <h2 className="job__title">Construction General Helper</h2>
-              <div className="job__company">C.D Barnes & Associates</div>
-              <div className="job__highlight">
-                <div className="job__highlight--left">
-                  <span className="label">Distance</span>
-                  <span className="value">5.6 miles</span>
-                </div>
-                <div className="job__highlight--right">
-                  <span className="label">Hourly Rate</span>
-                  <span className="value">13.50</span>
-                </div>
-              </div>
-
-              <div className="job__details">
-                <div className="job__detail shift-dates">
-                  <h4>shift dates</h4>
-                  <ul>
-                    <li>APR 7, WED 8:00 AM - 10:00PM PDT</li>
-                    <li>APR 8, WED 8:00 AM - 10:00PM PDT</li>
-                    <li>APR 9, WED 8:00 AM - 10:00PM PDT</li>
-                  </ul>
-                </div>
-
-                <div className="job__detail location">
-                  <h4>Location</h4>
-                  <p>123 Main Street, Tacoma, WA 98409</p>
-                  <span>5.62 miles from your job search location</span>
-                </div>
-
-                <div className="job__detail requirements">
-                  <h4>Requirements</h4>
-                  <ul>
-                    <li>safety vest</li>
-                    <li>hard hat</li>
-                    <li>sth else</li>
-                  </ul>
-                </div>
-
-                <div className="job__detail report-to">
-                  <h4>report to</h4>
-                  <p>Dave (123) 546 987</p>
-                </div>
-              </div>
-              <div className="decision-btns">
-                <button className="btn btn--white" type="button">
-                  No Thanks
-                </button>
-                <button className="btn btn--black" type="button">
-                  I'll Take it
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div className="job">
-            <div className="job__img">
-              <img
-                src="https://imgs.swipejobs.com/js/job-category/construction-1.jpg"
-                alt=""
-              />
-            </div>
-            <div className="job__content">
-              <h2 className="job__title">Construction General Helper</h2>
-              <div className="job__company">C.D Barnes & Associates</div>
-              <div className="job__highlight">
-                <div className="job__highlight--left">
-                  <span className="label">Distance</span>
-                  <span className="value">5.6 miles</span>
-                </div>
-                <div className="job__highlight--right">
-                  <span className="label">Hourly Rate</span>
-                  <span className="value">13.50</span>
-                </div>
-              </div>
-
-              <div className="job__details">
-                <div className="job__detail shift-dates">
-                  <h4>shift dates</h4>
-                  <ul>
-                    <li>APR 7, WED 8:00 AM - 10:00PM PDT</li>
-                    <li>APR 8, WED 8:00 AM - 10:00PM PDT</li>
-                    <li>APR 9, WED 8:00 AM - 10:00PM PDT</li>
-                  </ul>
-                </div>
-
-                <div className="job__detail location">
-                  <h4>Location</h4>
-                  <p>123 Main Street, Tacoma, WA 98409</p>
-                  <span>5.62 miles from your job search location</span>
-                </div>
-
-                <div className="job__detail requirements">
-                  <h4>Requirements</h4>
-                  <ul>
-                    <li>safety vest</li>
-                    <li>hard hat</li>
-                    <li>sth else</li>
-                  </ul>
-                </div>
-
-                <div className="job__detail report-to">
-                  <h4>report to</h4>
-                  <p>Dave (123) 546 987</p>
-                </div>
-              </div>
-              <div className="decision-btns">
-                <button className="btn btn--white" type="button">
-                  No Thanks
-                </button>
-                <button className="btn btn--black" type="button">
-                  I'll Take it
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div className="job">
-            <div className="job__img">
-              <img
-                src="https://imgs.swipejobs.com/js/job-category/construction-1.jpg"
-                alt=""
-              />
-            </div>
-            <div className="job__content">
-              <h2 className="job__title">Construction General Helper</h2>
-              <div className="job__company">C.D Barnes & Associates</div>
-              <div className="job__highlight">
-                <div className="job__highlight--left">
-                  <span className="label">Distance</span>
-                  <span className="value">5.6 miles</span>
-                </div>
-                <div className="job__highlight--right">
-                  <span className="label">Hourly Rate</span>
-                  <span className="value">13.50</span>
-                </div>
-              </div>
-
-              <div className="job__details">
-                <div className="job__detail shift-dates">
-                  <h4>shift dates</h4>
-                  <ul>
-                    <li>APR 7, WED 8:00 AM - 10:00PM PDT</li>
-                    <li>APR 8, WED 8:00 AM - 10:00PM PDT</li>
-                    <li>APR 9, WED 8:00 AM - 10:00PM PDT</li>
-                  </ul>
-                </div>
-
-                <div className="job__detail location">
-                  <h4>Location</h4>
-                  <p>123 Main Street, Tacoma, WA 98409</p>
-                  <span>5.62 miles from your job search location</span>
-                </div>
-
-                <div className="job__detail requirements">
-                  <h4>Requirements</h4>
-                  <ul>
-                    <li>safety vest</li>
-                    <li>hard hat</li>
-                    <li>sth else</li>
-                  </ul>
-                </div>
-
-                <div className="job__detail report-to">
-                  <h4>report to</h4>
-                  <p>Dave (123) 546 987</p>
-                </div>
-              </div>
-              <div className="decision-btns">
-                <button className="btn btn--white" type="button">
-                  No Thanks
-                </button>
-                <button className="btn btn--black" type="button">
-                  I'll Take it
-                </button>
-              </div>
-            </div>
-
-            <div className="job"></div>
           </div>
         </div>
       </main>
