@@ -1,0 +1,53 @@
+.loader-container {
+  display: none;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  &.isLoading {
+    display: block;
+  }
+}
+
+.loader,
+.loader:after {
+  border-radius: 50%;
+  width: 10em;
+  height: 10em;
+}
+.loader {
+  position: absolute;
+  top: 40%;
+  margin: auto;
+  font-size: 10px;
+  position: relative;
+  text-indent: -9999em;
+  border-top: 1.1em solid $white;
+  border-right: 1.1em solid $white;
+  border-bottom: 1.1em solid $white;
+  border-left: 1.1em solid $shamrock;
+  transform: translateZ(0);
+  animation: loadEffect 1.1s infinite linear;
+}
+
+@-webkit-keyframes loadEffect {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes loadEffect {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
