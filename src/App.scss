@@ -98,12 +98,13 @@ main {
   width: 100%;
   margin-bottom: $base-padding;
   background-color: $white;
+  align-content: stretch;
 
   &__img {
     width: 100%;
 
     img {
-      max-width: 100%;
+      width: 100%;
       height: auto;
     }
   }
@@ -220,6 +221,7 @@ main {
 
       li {
         margin-bottom: $base-margin;
+        font-size: 12px;
       }
     }
 

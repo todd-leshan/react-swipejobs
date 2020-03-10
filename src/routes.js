@@ -1,7 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { createStore } from "redux";
+import { createStore, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
+import ReduxThunk from "redux-thunk";
 
 import rootReducer from "./redux/reducers";
 
@@ -9,7 +10,7 @@ import App from "./App";
 import Cutup from "./views/Cutup";
 import CutupLoading from "./views/CutupLoading";
 
-const store = createStore(rootReducer);
+const store = createStore(rootReducer, applyMiddleware(ReduxThunk));
 
 const AllRoutes = () => (
   <Provider store={store}>
