@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/react-swipejobs/static/css/main.10b8de96.chunk.css",
+    "main.js": "/react-swipejobs/static/js/main.6fa42ce9.chunk.js",
+    "main.js.map": "/react-swipejobs/static/js/main.6fa42ce9.chunk.js.map",
+    "runtime-main.js": "/react-swipejobs/static/js/runtime-main.7981197b.js",
+    "runtime-main.js.map": "/react-swipejobs/static/js/runtime-main.7981197b.js.map",
+    "static/js/2.b1ec1542.chunk.js": "/react-swipejobs/static/js/2.b1ec1542.chunk.js",
+    "static/js/2.b1ec1542.chunk.js.map": "/react-swipejobs/static/js/2.b1ec1542.chunk.js.map",
+    "index.html": "/react-swipejobs/index.html",
+    "precache-manifest.3bbbd5d61f021c10d189f290dd916953.js": "/react-swipejobs/precache-manifest.3bbbd5d61f021c10d189f290dd916953.js",
+    "service-worker.js": "/react-swipejobs/service-worker.js",
+    "static/css/main.10b8de96.chunk.css.map": "/react-swipejobs/static/css/main.10b8de96.chunk.css.map",
+    "static/js/2.b1ec1542.chunk.js.LICENSE.txt": "/react-swipejobs/static/js/2.b1ec1542.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7981197b.js",
+    "static/js/2.b1ec1542.chunk.js",
+    "static/css/main.10b8de96.chunk.css",
+    "static/js/main.6fa42ce9.chunk.js"
+  ]
+}
