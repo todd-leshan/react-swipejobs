@@ -1,0 +1,9 @@
+.msg {
+  &--error {
+    font-size: $font-base;
+    font-weight: bold;
+    color: $burnt-sienna;
+    text-align: center;
+    margin-top: 20%;
+  }
+}
