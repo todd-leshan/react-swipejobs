@@ -27,10 +27,6 @@ describe("Redux Actions", () => {
       moxios.install();
     });
 
-    afterEach(() => {
-      moxios.install();
-    });
-
     test("should return an action to update user", () => {
       const payload = {
         userId: "1",
