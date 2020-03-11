@@ -36,6 +36,7 @@ describe("helper functions", () => {
       const formatedJobData = formatJobData(jobData);
 
       expect(formatedJobData).toEqual({
+        id: "5775d8e18a488e6c5bb08333",
         title: "Construction General Helper",
         image: "https://imgs.swipejobs.com/js/job-category/construction-1.jpg",
         companyName: "Steve Smith Construction",
@@ -53,6 +54,7 @@ describe("helper functions", () => {
       const formatedJobData = formatJobData({});
 
       expect(formatedJobData).toEqual({
+        id: undefined,
         title: undefined,
         image: undefined,
         companyName: undefined,
@@ -70,6 +72,7 @@ describe("helper functions", () => {
       const formatedJobData = formatJobData({ distanceToTravel: "5.555" });
 
       expect(formatedJobData).toEqual({
+        id: undefined,
         title: undefined,
         image: undefined,
         companyName: undefined,
@@ -87,6 +90,7 @@ describe("helper functions", () => {
       const formatedJobData = formatJobData({ hourlyRate: "5555" });
 
       expect(formatedJobData).toEqual({
+        id: undefined,
         title: undefined,
         image: undefined,
         companyName: undefined,
@@ -106,6 +110,7 @@ describe("helper functions", () => {
       });
 
       expect(formatedJobData).toEqual({
+        id: undefined,
         title: undefined,
         image: undefined,
         companyName: undefined,

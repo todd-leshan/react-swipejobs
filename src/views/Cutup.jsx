@@ -45,6 +45,24 @@ const Cutup = () => {
                     <li>APR 8, WED 8:00 AM - 10:00PM PDT</li>
                     <li>APR 9, WED 8:00 AM - 10:00PM PDT</li>
                   </ul>
+                  <span class="see-more">See more shift dates</span>
+                </div>
+
+                <div className="pop-up">
+                  <h3>shift dates</h3>
+                  <button className="btn btn--close">Close</button>
+                  <ul>
+                    <li>APR 7, WED 8:00 AM - 10:00PM PDT</li>
+                    <li>APR 8, WED 8:00 AM - 10:00PM PDT</li>
+                    <li>APR 9, WED 8:00 AM - 10:00PM PDT</li>
+                    <li>APR 7, WED 8:00 AM - 10:00PM PDT</li>
+                    <li>APR 8, WED 8:00 AM - 10:00PM PDT</li>
+                    <li>APR 9, WED 8:00 AM - 10:00PM PDT</li>
+                    <li>APR 7, WED 8:00 AM - 10:00PM PDT</li>
+                    <li>APR 8, WED 8:00 AM - 10:00PM PDT</li>
+                    <li>APR 9, WED 8:00 AM - 10:00PM PDT</li>
+                  </ul>
+                  <button className="btn btn--white btn--close">Close</button>
                 </div>
 
                 <div className="job__detail location">

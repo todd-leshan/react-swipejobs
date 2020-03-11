@@ -1,0 +1,63 @@
+.pop-up {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  padding: $base-padding;
+
+  .btn--close {
+    &:first-of-type {
+      position: absolute;
+      z-index: 2;
+      top: $base-padding * 0.8;
+      right: $base-padding * 0.8;
+      font-size: 0;
+      padding: 10px;
+      border: none;
+
+      &:before,
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        z-index: 3;
+        width: 20px;
+        height: 3px;
+        background-color: $black;
+        top: 50%;
+        right: 0;
+      }
+
+      &:before {
+        transform: rotate(45deg);
+      }
+
+      &:after {
+        transform: rotate(135deg);
+      }
+    }
+
+    &:last-of-type {
+      position: absolute;
+      bottom: $base-padding;
+      right: $base-padding;
+    }
+  }
+
+  h3 {
+    text-transform: capitalize;
+    margin-bottom: $base-margin * 2;
+    border-bottom: 1px solid $dusty-gray;
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      margin-bottom: $base-margin;
+    }
+  }
+}

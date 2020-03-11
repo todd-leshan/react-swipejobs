@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
+
+import PopUp from "./global/PopUp";
 
 const Job = props => {
   const {
@@ -15,7 +17,14 @@ const Job = props => {
     shifts
   } = props.jobData;
 
-  console.info(props);
+  const [showShifts, setshowShifts] = useState(false);
+  const showMoreShifts = () => setshowShifts(true);
+  const hideShiftsPopup = () => setshowShifts(false);
+
+  const [showRequirements, setshowRequirements] = useState(false);
+  const showMoreRequirements = () => setshowRequirements(true);
+  const hideRequirementsPopup = () => setshowRequirements(false);
+
   return (
     <div className="job">
       <div className="job__img">
@@ -46,7 +55,21 @@ const Job = props => {
                 <li key={index}>{shift}</li>
               ))}
             </ul>
+            {shifts.length > 2 && (
+              <span className="see-more" onClick={showMoreShifts}>
+                See more shift dates
+              </span>
+            )}
           </div>
+
+          {shifts.length > 2 && (
+            <PopUp
+              showPopup={showShifts}
+              title="shift dates"
+              data={shifts}
+              onCloseClick={hideShiftsPopup}
+            />
+          )}
 
           <div className="job__detail location">
             <h4>Location</h4>
@@ -59,14 +82,30 @@ const Job = props => {
           </div>
 
           {requirements && (
-            <div className="job__detail requirements">
-              <h4>Requirements</h4>
-              <ul>
-                {requirements.map((requirement, index) => (
-                  <li key={index}>{requirement}</li>
-                ))}
-              </ul>
-            </div>
+            <>
+              <div className="job__detail requirements">
+                <h4>Requirements</h4>
+                <ul>
+                  {requirements.map((requirement, index) => (
+                    <li key={index}>{requirement}</li>
+                  ))}
+                </ul>
+                {requirements.length > 2 && (
+                  <span className="see-more" onClick={showMoreRequirements}>
+                    See more requirements
+                  </span>
+                )}
+              </div>
+
+              {requirements.length > 2 && (
+                <PopUp
+                  showPopup={showRequirements}
+                  title="Requirements"
+                  data={requirements}
+                  onCloseClick={hideRequirementsPopup}
+                />
+              )}
+            </>
           )}
 
           {reportToName && (
@@ -78,14 +117,15 @@ const Job = props => {
             </div>
           )}
         </div>
-        <div className="decision-btns">
-          <button className="btn btn--white" type="button">
-            No Thanks
-          </button>
-          <button className="btn btn--black" type="button">
-            I'll Take it
-          </button>
-        </div>
+      </div>
+
+      <div className="decision-btns">
+        <button className="btn btn--white" type="button">
+          No Thanks
+        </button>
+        <button className="btn btn--black" type="button">
+          I'll Take it
+        </button>
       </div>
     </div>
   );

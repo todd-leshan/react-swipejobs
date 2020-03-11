@@ -31,6 +31,7 @@ export const formatShifts = (shifts = [], timezone = "UTC") => {
 };
 
 export const formatJobData = jobData => {
+  const id = get(jobData, "jobId");
   const title = get(jobData, "jobTitle.name");
   const image = get(jobData, "jobTitle.imageUrl");
   const companyName = get(jobData, "company.name");
@@ -60,6 +61,7 @@ export const formatJobData = jobData => {
   shifts = formatShifts(shifts, timezone);
 
   return {
+    id,
     title,
     image,
     companyName,

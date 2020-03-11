@@ -1,0 +1,28 @@
+header {
+  position: relative;
+  padding: $base-padding;
+  background-color: $black;
+
+  .link {
+    display: inline-block;
+
+    &__logo {
+      display: inline-block;
+      width: 120px;
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    &__profile {
+      position: absolute;
+      right: $base-padding;
+      bottom: $base-padding;
+      color: $white;
+      text-decoration: none;
+      text-transform: capitalize;
+    }
+  }
+}
