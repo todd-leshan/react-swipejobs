@@ -1,8 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import { formatJobData } from "../utils/helpers";
-
 import Job from "./Job";
 
 const mapStateToProps = state => ({
@@ -15,8 +13,7 @@ const Jobs = props => {
   return (
     <div className="jobs">
       {props.jobs.map(jobData => {
-        const jobDataFormmatted = formatJobData(jobData);
-        return <Job key={jobData.jobId} jobData={jobDataFormmatted} />;
+        return <Job key={jobData.id} jobData={jobData} />;
       })}
     </div>
   );

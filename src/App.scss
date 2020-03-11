@@ -175,6 +175,12 @@ main {
         background: url(./assets/icon-calendar.png) no-repeat center center;
         background-size: contain;
       }
+
+      ul {
+        li {
+          font-size: 12px;
+        }
+      }
     }
 
     &.location {

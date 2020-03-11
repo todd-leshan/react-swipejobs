@@ -1,7 +1,8 @@
 import actionTypes from "./actionTypes";
 import { JOBS_LOADING_STATUS } from "../constants";
 
-import { getUserById, getJobsByUserId } from "../utils/API";
+import { getUserById, getJobsByUserId, acceptAJobRequest } from "../utils/API";
+import { formatJobData } from "../utils/helpers";
 
 export const updateUser = ({ userId, userData }) => {
   return {
@@ -40,7 +41,11 @@ export const getJobsByIdAsync = ({ userId }) => {
         dispatch(
           updateJobsLoadingStatus({ status: JOBS_LOADING_STATUS.LOADED })
         );
-        dispatch(updateJobs({ jobsData: res.data }));
+
+        const jobsData = res.data.map(jobData => {
+          return formatJobData(jobData);
+        });
+        dispatch(updateJobs({ jobsData }));
       })
       .catch(error => {
         dispatch(
@@ -62,6 +67,14 @@ export const rejectAJob = ({ userId, jobId }) => {
   return {
     type: actionTypes.JOB_REJECT,
     payload: { userId, jobId }
+  };
+};
+
+export const accpetAJobAsync = ({ userId, jobId }) => {
+  return dispatch => {
+    return acceptAJobRequest(userId, jobId)
+      .then(res => dispatch(updateUser({ userId, userData: res.data })))
+      .catch(error => dispatch(handleError()));
   };
 };
 
