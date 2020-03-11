@@ -28,6 +28,7 @@ const rootReducer = (state = initialState, action) => {
       jobs: jobsData,
       areJobsLoaded: true
     };
+    console.info(newState);
     return newState;
   }
 
@@ -40,10 +41,24 @@ const rootReducer = (state = initialState, action) => {
     return { ...state, jobsLoadingStatus: status };
   }
 
+  if (action.type === actionTypes.UPDATE_JOB_STATUS) {
+    const jobId = get(action, "payload.jobId");
+    const newStatus = get(action, "payload.newStatus");
+    const jobs = [...state.jobs];
+    const updatedJobs = jobs.map(job => {
+      if (job.id === jobId) {
+        job.status = newStatus;
+      }
+
+      return job;
+    });
+
+    return { ...state, jobs: updatedJobs };
+  }
+
   if (action.type === actionTypes.ERROR) {
     return state;
   }
-  console.info(state);
   return state;
 };
 

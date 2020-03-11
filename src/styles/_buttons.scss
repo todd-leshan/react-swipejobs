@@ -10,8 +10,8 @@
     background-color: $white;
     color: $dusty-gray;
 
-    &:hover,
-    &:active {
+    &:hover:enabled,
+    &:active:enabled {
       background-color: $dusty-gray;
       color: $white;
     }
@@ -21,10 +21,14 @@
     background-color: $black;
     color: $white;
 
-    &:hover,
-    &:active {
+    &:hover:enabled,
+    &:active:enabled {
       background-color: $white;
       color: $black;
     }
+  }
+
+  &:disabled {
+    cursor: not-allowed;
   }
 }

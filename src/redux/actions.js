@@ -1,7 +1,12 @@
 import actionTypes from "./actionTypes";
-import { JOBS_LOADING_STATUS } from "../constants";
+import { JOBS_LOADING_STATUS, JOB_STATUS } from "../constants";
 
-import { getUserById, getJobsByUserId, acceptAJobRequest } from "../utils/API";
+import {
+  getUserById,
+  getJobsByUserId,
+  acceptAJob,
+  rejectAJob
+} from "../utils/API";
 import { formatJobData } from "../utils/helpers";
 
 export const updateUser = ({ userId, userData }) => {
@@ -56,25 +61,48 @@ export const getJobsByIdAsync = ({ userId }) => {
   };
 };
 
-export const acceptAJob = ({ userId, jobId }) => {
-  return {
-    type: actionTypes.JOB_ACCEPT,
-    payload: { userId, jobId }
-  };
-};
-
-export const rejectAJob = ({ userId, jobId }) => {
-  return {
-    type: actionTypes.JOB_REJECT,
-    payload: { userId, jobId }
-  };
-};
-
 export const accpetAJobAsync = ({ userId, jobId }) => {
   return dispatch => {
-    return acceptAJobRequest(userId, jobId)
-      .then(res => dispatch(updateUser({ userId, userData: res.data })))
-      .catch(error => dispatch(handleError()));
+    return acceptAJob(userId, jobId)
+      .then(res => {
+        const resData = res.data;
+        if (resData.success === true) {
+          dispatch(updateJobStatus({ jobId, newStatus: JOB_STATUS.ACCEPTED }));
+        } else {
+          dispatch(
+            updateJobStatus({ jobId, newStatus: JOB_STATUS.NOTAVAILABLE })
+          );
+        }
+      })
+      .catch(error =>
+        dispatch(updateJobStatus({ jobId, newStatus: JOB_STATUS.NOTAVAILABLE }))
+      );
+  };
+};
+
+export const rejectAJobAsync = ({ userId, jobId }) => {
+  return dispatch => {
+    return rejectAJob(userId, jobId)
+      .then(res => {
+        const resData = res.data;
+        if (resData.success === true) {
+          dispatch(updateJobStatus({ jobId, newStatus: JOB_STATUS.REJECTED }));
+        } else {
+          dispatch(
+            updateJobStatus({ jobId, newStatus: JOB_STATUS.NOTAVAILABLE })
+          );
+        }
+      })
+      .catch(error =>
+        dispatch(updateJobStatus({ jobId, newStatus: JOB_STATUS.NOTAVAILABLE }))
+      );
+  };
+};
+
+export const updateJobStatus = ({ jobId, newStatus }) => {
+  return {
+    type: actionTypes.UPDATE_JOB_STATUS,
+    payload: { jobId, newStatus }
   };
 };
 

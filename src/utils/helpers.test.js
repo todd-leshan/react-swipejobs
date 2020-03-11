@@ -46,7 +46,8 @@ describe("helper functions", () => {
         reportToPhone: "2130010012",
         distanceToTravel: "3.47",
         hourlyRate: "55.05",
-        shifts: ["SEP 4, WED 4:00 PM - SEP 5, THU 12:00 AM CDT"]
+        shifts: ["SEP 4, WED 4:00 PM - SEP 5, THU 12:00 AM CDT"],
+        status: "available"
       });
     });
 
@@ -64,7 +65,8 @@ describe("helper functions", () => {
         reportToPhone: undefined,
         distanceToTravel: undefined,
         hourlyRate: undefined,
-        shifts: []
+        shifts: [],
+        status: "available"
       });
     });
 
@@ -82,7 +84,8 @@ describe("helper functions", () => {
         reportToPhone: undefined,
         distanceToTravel: undefined,
         hourlyRate: undefined,
-        shifts: []
+        shifts: [],
+        status: "available"
       });
     });
 
@@ -100,7 +103,8 @@ describe("helper functions", () => {
         reportToPhone: undefined,
         distanceToTravel: undefined,
         hourlyRate: undefined,
-        shifts: []
+        shifts: [],
+        status: "available"
       });
     });
 
@@ -120,7 +124,8 @@ describe("helper functions", () => {
         reportToPhone: undefined,
         distanceToTravel: "5.56",
         hourlyRate: undefined,
-        shifts: []
+        shifts: [],
+        status: "available"
       });
     });
   });

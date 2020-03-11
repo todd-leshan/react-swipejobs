@@ -16,7 +16,7 @@ const Cutup = () => {
       </header>
       <main>
         <div className="jobs">
-          <div className="job">
+          <div className="job accepted">
             <div className="job__img">
               <img
                 src="https://imgs.swipejobs.com/js/job-category/construction-1.jpg"
@@ -48,7 +48,7 @@ const Cutup = () => {
                   <span class="see-more">See more shift dates</span>
                 </div>
 
-                <div className="pop-up">
+                <div className="pop-up hidden">
                   <h3>shift dates</h3>
                   <button className="btn btn--close">Close</button>
                   <ul>
@@ -87,16 +87,16 @@ const Cutup = () => {
               </div>
             </div>
             <div className="decision-btns">
-              <button className="btn btn--white" type="button">
+              <button className="btn btn--white" type="button" disabled>
                 No Thanks
               </button>
-              <button className="btn btn--black" type="button">
+              <button className="btn btn--black" type="button" disabled>
                 I'll Take it
               </button>
             </div>
           </div>
 
-          <div className="job">
+          <div className="job rejected">
             <div className="job__img">
               <img
                 src="https://imgs.swipejobs.com/js/job-category/construction-1.jpg"
@@ -153,7 +153,7 @@ const Cutup = () => {
             </div>
           </div>
 
-          <div className="job">
+          <div className="job not_available">
             <div className="job__img">
               <img
                 src="https://imgs.swipejobs.com/js/job-category/construction-1.jpg"

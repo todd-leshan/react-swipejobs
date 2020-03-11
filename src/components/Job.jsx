@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 
 import PopUp from "./global/PopUp";
+import JobDecisionBtns from "./JobDecisionBtns";
 
 const Job = props => {
   const {
+    id,
     title,
     image,
     companyName,
@@ -14,7 +16,8 @@ const Job = props => {
     reportToPhone,
     distanceToTravel,
     hourlyRate,
-    shifts
+    shifts,
+    status
   } = props.jobData;
 
   const [showShifts, setshowShifts] = useState(false);
@@ -26,7 +29,7 @@ const Job = props => {
   const hideRequirementsPopup = () => setshowRequirements(false);
 
   return (
-    <div className="job">
+    <div className={`job ${status}`}>
       <div className="job__img">
         <img src={image} alt="" />
       </div>
@@ -119,20 +122,14 @@ const Job = props => {
         </div>
       </div>
 
-      <div className="decision-btns">
-        <button className="btn btn--white" type="button">
-          No Thanks
-        </button>
-        <button className="btn btn--black" type="button">
-          I'll Take it
-        </button>
-      </div>
+      <JobDecisionBtns jobId={id} jobStatus={status} />
     </div>
   );
 };
 
 Job.propTypes = {
   jobData: PropTypes.shape({
+    id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     image: PropTypes.string,
     companyName: PropTypes.string,

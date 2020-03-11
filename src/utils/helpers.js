@@ -1,6 +1,8 @@
 import get from "lodash/get";
 import moment from "moment-timezone";
 
+import { JOB_STATUS } from "../constants";
+
 const formatDate = (date, timezone, dateFormat) => {
   return moment(date)
     .tz(timezone)
@@ -60,6 +62,8 @@ export const formatJobData = jobData => {
   let shifts = get(jobData, "shifts");
   shifts = formatShifts(shifts, timezone);
 
+  const status = JOB_STATUS.AVAILABLE;
+
   return {
     id,
     title,
@@ -71,6 +75,7 @@ export const formatJobData = jobData => {
     reportToPhone,
     distanceToTravel,
     hourlyRate,
-    shifts
+    shifts,
+    status
   };
 };
